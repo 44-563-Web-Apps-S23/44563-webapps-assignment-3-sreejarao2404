@@ -36,7 +36,13 @@
     <hr>
     <blockcode>Active Gzip Compression</blockcode>
     <a href="https://stackoverflow.com/questions/29632198/gzip-compression-does-not-work-for-all-files">https://stackoverflow.com/questions/29632198/gzip-compression-does-not-work-for-all-files</a>
-
+    <pre>
+        # BEGIN GZIP
+        <ifmodule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+        </ifmodule>
+        # END GZIP
+    </pre>
     
 </body>
 
